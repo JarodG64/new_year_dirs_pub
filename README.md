@@ -105,7 +105,6 @@ Il faut cloner le depot du projet puis executer le script *install.sh*.
 ```bash
 git clone git@gitea.com:JarodG64/new_year_dirs_pub.git
 cd new_year_dirs_pub/
-chmod +x install.sh
 ./install.sh
 ```
 
@@ -129,7 +128,7 @@ sudo chmod 644 /etc/systemd/system/new_year_dirs.service
 sudo cp -uv new_year_dirs.timer /etc/systemd/system/new_year_dirs.timer
 sudo chmod 644 /etc/systemd/system/new_year_dirs.timer
 
-sudo systemctl reload
+sudo systemctl daemon-reload
 sudo systemctl enable new_year_dirs.service
 sudo systemctl enable new_year_dirs.timer
 sudo systemctl stop new_year_dirs.service
