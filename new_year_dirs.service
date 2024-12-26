@@ -1,0 +1,14 @@
+[Unit]
+Description=Creation annuelle de dossiers de stockage
+After=network.target syslog.target
+Wants=network.target
+ConditionFileIsExecutable=/usr/local/bin/new_year_dirs.sh
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/new_year_dirs.sh
+User=dietpi
+Group=dietpi
+
+[Install]
+WantedBy=multi-user.target

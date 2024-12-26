@@ -1,0 +1,10 @@
+[Unit]
+Description=Creation annuelle de dossiers de stockage
+
+[Timer]
+OnBootSec=60
+OnCalendar=*-1-1 00:10:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target
