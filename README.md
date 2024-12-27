@@ -129,14 +129,11 @@ sudo chmod 644 /etc/systemd/system/new_year_dirs.service
 sudo cp -v new_year_dirs.timer /etc/systemd/system/new_year_dirs.timer
 sudo chmod 644 /etc/systemd/system/new_year_dirs.timer
 sudo systemctl daemon-reload
-echo " "
-echo "Configuration du service et du timer :"
-sudo systemctl enable new_year_dirs.service
-sudo systemctl enable new_year_dirs.timer
-sudo systemctl start new_year_dirs.timer
-sudo systemctl status new_year_dirs.service
+sudo systemctl enable --now new_year_dirs.timer
 echo " "
 sudo systemctl status new_year_dirs.timer
+echo " "
+sudo systemctl status new_year_dirs.service
 
 exit 0
 ```
@@ -146,6 +143,7 @@ exit 0
 + [Baeldung : Running multi-line shell code](https://www.baeldung.com/linux/run-multi-line-shell-code)
 + [LinuxSimply : 3 ways to iterate an array in Bash](https://linuxsimply.com/bash-scripting-tutorial/array/elements-of-array/iterate-array/)
 + [Linuxtricks.fr : Creer des services timers](https://www.linuxtricks.fr/wiki/systemd-creer-des-services-timers-unites)
++ [Learn Linux TV : Automate Your Tasks with systemd Timers](https://www.learnlinux.tv/automate-your-tasks-with-systemd-timers-a-step-by-step-guide/)
 + [Manpages.org : cp](https://fr.manpages.org/cp)
 
 
